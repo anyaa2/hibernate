@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13 Nov, 2022 10:50:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.Db" table="db" catalog="mysql" optimistic-lock="version">
+        <composite-id name="id" class="hibernate.DbId">
+            <key-property name="host" type="string">
+                <column name="Host" length="60" />
+            </key-property>
+            <key-property name="db" type="string">
+                <column name="Db" length="64" />
+            </key-property>
+            <key-property name="user" type="string">
+                <column name="User" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="selectPriv" type="string">
+            <column name="Select_priv" length="2" not-null="true" />
+        </property>
+        <property name="insertPriv" type="string">
+            <column name="Insert_priv" length="2" not-null="true" />
+        </property>
+        <property name="updatePriv" type="string">
+            <column name="Update_priv" length="2" not-null="true" />
+        </property>
+        <property name="deletePriv" type="string">
+            <column name="Delete_priv" length="2" not-null="true" />
+        </property>
+        <property name="createPriv" type="string">
+            <column name="Create_priv" length="2" not-null="true" />
+        </property>
+        <property name="dropPriv" type="string">
+            <column name="Drop_priv" length="2" not-null="true" />
+        </property>
+        <property name="grantPriv" type="string">
+            <column name="Grant_priv" length="2" not-null="true" />
+        </property>
+        <property name="referencesPriv" type="string">
+            <column name="References_priv" length="2" not-null="true" />
+        </property>
+        <property name="indexPriv" type="string">
+            <column name="Index_priv" length="2" not-null="true" />
+        </property>
+        <property name="alterPriv" type="string">
+            <column name="Alter_priv" length="2" not-null="true" />
+        </property>
+        <property name="createTmpTablePriv" type="string">
+            <column name="Create_tmp_table_priv" length="2" not-null="true" />
+        </property>
+        <property name="lockTablesPriv" type="string">
+            <column name="Lock_tables_priv" length="2" not-null="true" />
+        </property>
+        <property name="createViewPriv" type="string">
+            <column name="Create_view_priv" length="2" not-null="true" />
+        </property>
+        <property name="showViewPriv" type="string">
+            <column name="Show_view_priv" length="2" not-null="true" />
+        </property>
+        <property name="createRoutinePriv" type="string">
+            <column name="Create_routine_priv" length="2" not-null="true" />
+        </property>
+        <property name="alterRoutinePriv" type="string">
+            <column name="Alter_routine_priv" length="2" not-null="true" />
+        </property>
+        <property name="executePriv" type="string">
+            <column name="Execute_priv" length="2" not-null="true" />
+        </property>
+        <property name="eventPriv" type="string">
+            <column name="Event_priv" length="2" not-null="true" />
+        </property>
+        <property name="triggerPriv" type="string">
+            <column name="Trigger_priv" length="2" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
